@@ -1,0 +1,19 @@
+{
+  "lock": false,
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-env --unstable-hmr server.jsx"
+  },
+  "imports": {
+    "@kyiro/hono": "jsr:@kyiro/hono@^0.1.1",
+    "acorn": "npm:acorn",
+    "acorn-walk": "npm:acorn-walk",
+    "hono/jsx": "https://esm.sh/hono@v4.1.2/jsx",
+    "hono/jsx/jsx-runtime": "https://esm.sh/hono@v4.1.2/jsx/jsx-runtime"
+  },
+  "compilerOptions": {
+    "lib": ["deno.ns", "dom"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "checkJs": true
+  }
+}

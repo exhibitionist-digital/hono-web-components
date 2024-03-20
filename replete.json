@@ -1,0 +1,10 @@
+{
+  "command": [
+    "deno",
+    "run",
+    "--allow-all",
+    "--config",
+    "./deno.json",
+    "./replete.js"
+  ]
+}
