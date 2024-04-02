@@ -8,18 +8,11 @@ const raw = (a, s) => {
   return (c.isEscaped = !0), (c.callbacks = s), c;
 };
 
-let _resolve = 'http://localhost:8000';
-
-/**
- * @param {string} url
- */
-const setResolve = (url) => (_resolve = url);
-
 /**
  * @param {string} url
  * @returns {URL}
  */
-const resolve = (url) => new URL(url, _resolve);
+const resolve = (url) => new URL(url, 'http://localhost:8000');
 
 const tag = String.raw;
 
@@ -53,4 +46,4 @@ function defineElement(name, template, callbacks) {
   return newElement;
 }
 
-export { raw, resolve, tag, setResolve, defineElement };
+export { raw, resolve, tag, defineElement };
